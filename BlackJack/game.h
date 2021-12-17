@@ -1,5 +1,5 @@
 //
-// Created by Arina Umushkina on 16.12.2021.
+// Created by Arina on 16.12.2021.
 //
 
 #ifndef BLACKJACK_GAME_H
