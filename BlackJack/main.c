@@ -7,9 +7,9 @@ int main() {
     char name[10] = "";
     scanf("%s", name);
     printf("Hello %s ! Let's play? Type 'y' if ready or 'n' if you wanna exit \n", name);
-    char flag[1];
-    scanf("%s", flag);
-    if (flag[0] == 'y' || flag[0] == 'Y') {
+    char flag;
+    scanf("%s", &flag);
+    if (flag == 'y' || flag == 'Y') {
         start_game(name);
     } else {
         printf("Good buy! \n");

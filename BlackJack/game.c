@@ -115,9 +115,9 @@ void start_game(char *playerName) {
             printf("\n");
         }
         printf("Would you like to add one else? \n");
-        char flag[1];
-        scanf("%s", flag);
-        if (flag[0] == 'y' || flag[0] == 'Y') {
+        char flag;
+        scanf("%s", &flag);
+        if (flag == 'y' || flag == 'Y') {
             int counter = player->cardsCounter;
             player->card[counter] = (card_t) *cards[counter + dealer->cardsCounter];
             player->cardsCounter++;
