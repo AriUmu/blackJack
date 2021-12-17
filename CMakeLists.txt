@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
-project(blackjack C)
+project(BlackJack C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(blackjack main.c cards.h deck.c deck.h game.c game.h)
+add_executable(BlackJack BlackJack/main.c BlackJack/cards.h BlackJack/deck.c BlackJack/deck.h BlackJack/game.c BlackJack/game.h)

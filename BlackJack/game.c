@@ -90,10 +90,14 @@ static void show_winner(player_t *player, player_t *dealer) {
     int playerResult = countCardRank(player->cardsCounter, player->card);
     int dealerResult = countCardRank(dealer->cardsCounter, dealer->card);
 
-    if ((playerResult > dealerResult) && player <= 21) {
-        printf("You (%s) won with result %d!  vs %d \n",player->name, playerResult, dealerResult);
+    if (playerResult == 21) {
+        printf("You won with result %d vs %d \n", playerResult, dealerResult);
+    } else if (dealerResult <= 21 && playerResult <= 21 && (playerResult > dealerResult)) {
+        printf("You won with result %d vs %d \n", playerResult, dealerResult);
+    } else if (dealerResult > 21) {
+        printf("You won with result %d vs %d \n", playerResult, dealerResult);
     } else {
-        printf("Dealer won with result %d!  vs %d \n", dealerResult, playerResult);
+        printf("Dealer won with result %d vs %d \n", dealerResult, playerResult);
     }
 }
 
